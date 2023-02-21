@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>OLX</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{%static 'assets/favicon.ico'%}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <!-- Core theme CSS (includes Bootstrap)  -->
+        <link href="{%static 'css/styles.css'%}" rel="stylesheet" />
+    </head>
+    <body>
+
+    <!-- ------Navbar Starts -->
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-fluid">
+          <h4 class="display-7 fw-bolder">olx</h4>
+          <!-- <a class="navbar-brand" href="#">Olx</a>  -->
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 1%;">
+              <li class="nav-item">
+                <a class="nav-link active form-control dropdown-toggle form-control" href="#" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">
+                  Select Your Country
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">India</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">USA</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Canada</a></li>
+                </ul>
+              </li>
+              <form class="d-flex" role="search" style="margin-left: 5%;">
+                <input class="form-control me-2" type="search" placeholder="Find Cars, mobile phone and More...." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              
+              <!-- <form class="search_box" style="margin-left: 5%;">
+                <input type="text" class="searchclass form-control" id="searchid" placeholder="Find Cars, mobile phone and More....">
+                <button type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form> -->
+              
+              <li class="nav-item dropdown" style="margin-left: 5%;">
+                <a class="nav-link dropdown-toggle form-control" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Language
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Hindi</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  
+                </ul>
+              </li>
+
+              <div class="message" style="margin-left: 5%;">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+             </ul>
+
+            <div class="messeage" style="margin-right: 50%;">
+              <i class="fa-regular fa-bell"></i>
+          </div>
+
+          <div class="selling_page">
+            <button class="form-control" style="border-color:blue darkblue yellowgreen ;"> <i class="fa-solid fa-plus"></i>
+                SELL
+            </button>
+        </div>
+           
+          </div>
+        </div>
+      </nav>
+      <!------------Navbar Ends------------  -->
+
+       <!-- --------------Navbar 2 Starts------------ -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">
+            ALL CATEGORIES
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Cars</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Mobile Phones</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Scooters</a></li>
+          </ul>
+        </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="#">Mobile Phones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="#">Scooters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="#">Motorcycle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="#">For Sale: Houses & Appartment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="#">For Rent: Houses & Apartment</a>
+          </li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        
+  <!-- ----------Navbar 2 Ends-----------------     -->
+
+  <!-- ----------------Header Starts------------ -->
+
+  <header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">OLX CLONE</h1>
+            <p class="lead fw-normal text-white-50 mb-0"></p>
+        </div>
+    </div>
+  </header>
+  
+  <!-- -------------Header Ends---------- -->
+
+   <!-- Section-->
+  <div class="container">
+    {%block body%}
+
+    {%endblock%}
+  </div>
+
+        <!-- ---------Footer Starts----------- -->
+<!-- <div class=" me-auto">
+  <div class="footer">
+      <div class="footer_box">
+          <h2>POPULAR LOCATIONS</h2>
+          <p> Kolkata</p>
+          <p>Mumbai</p>
+          <p>Chennai</p>
+          <p>pune</p>
+      </div>
+      <div class="footer_box">
+          <h2>TRENDING LOCATIONS</h2>
+          <p> Bhubaneshwar</p>
+          <p>Hyderabad</p>
+          <p>Chandigarh</p>
+          <p>Nashik</p>
+      </div>
+      <div class="footer_box">
+          <h2>ABOUT US</h2>
+          <p> About OLX Group</p>
+          <p>Careers</p>
+          <p>Contact Us</p>
+          <p>OLXPeople</p>
+      </div>
+      <div class="footer_box">
+          <h2>OLX</h2>
+          <p> Help</p>
+          <p>Legal & Privacy information</p>
+          <p>Blog</p>
+      </div>
+  </div>
+</div> -->
+
+
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{%static 'js/scripts.js'%}"></script>
+    </body>
+</html>
