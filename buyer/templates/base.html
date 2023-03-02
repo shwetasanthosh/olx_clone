@@ -18,9 +18,9 @@
     <body>
 
     <!-- ------Navbar Starts -->
-    <nav class="navbar navbar-expand-lg bg-body-secondary">
+    <nav class="navbar navbar-expand-lg bg-body-secondary bg-dark" style="width: 100%; height: 100px;">
         <div class="container-fluid">
-          <h4 class="display-7 fw-bolder">olx</h4>
+          <h4 class="display-7 fw-bolder text text-white">Olx</h4>
           <!-- <a class="navbar-brand" href="#">Olx</a>  -->
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 1%;">
               <li class="nav-item">
-                <a class="nav-link active form-control dropdown-toggle form-control" href="#" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">
+                <a class="nav-link active form-control dropdown-toggle form-control text text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">
                   Select Your Country
                 </a>
                 <ul class="dropdown-menu">
@@ -40,8 +40,8 @@
                 </ul>
               </li>
               <form class="d-flex" role="search" style="margin-left: 5%;">
-                <input class="form-control me-2" type="search" placeholder="Find Cars, mobile phone and More...." aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" style="width: 500px;" placeholder="Find Cars, mobile phone and More...." aria-label="Search">
+                <button class="btn btn-outline-success btn-success text text-white" type="submit">Search</button>
               </form>
               
               <!-- <form class="search_box" style="margin-left: 5%;">
@@ -52,7 +52,7 @@
               </form> -->
               
               <li class="nav-item dropdown" style="margin-left: 5%;">
-                <a class="nav-link dropdown-toggle form-control" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle form-control  text text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Language
                 </a>
                 <ul class="dropdown-menu">
@@ -60,24 +60,40 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Hindi</a></li>
                   <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#!">Malaylam</a></li>
                   
                 </ul>
               </li>
+              <li class="nav-item" style="margin-left: 110px;"><a class="nav-link active" aria-current="page"
+                href="{%url 'signin'%}">Login</a></li>
+        </li>
+        <li class="nav-item" style="margin-left: 50px;"><a class="nav-link active " aria-current="page"
+          href="{%url 'signout'%}">Logout</a></li>
+    </li>
 
-              <div class="message" style="margin-left: 5%;">
+              <!-- <div class="message" style="margin-left: 5%;">
                 <i class="fa-regular fa-comment"></i>
-              </div>
+              </div> -->
              </ul>
 
-            <div class="messeage" style="margin-right: 50%;">
+            <!-- <div class="messeage" style="margin-right: 50%;">
               <i class="fa-regular fa-bell"></i>
-          </div>
+          </div> -->
+          <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{%url 'profile-view'%}" style="margin-right: 70px;">
+                    <img src="{%static 'image/userlogo.jpg'%}" alt="" width="50" height="50"
+                        class="d-inline-block align-text-center">
+                    <span>{{request.user}}</span>
+                </a>
+            </div>
+        </nav>
 
           <div class="selling_page">
-            <button class="form-control" style="border-color:blue darkblue yellowgreen ;"> <i class="fa-solid fa-plus"></i>
-                SELL
+            <button class="form-control btn btn-info rounded-pill" style="border-color:blue darkblue yellowgreen ; margin-right: 50px; width: 100px;"> <i class="fa-solid fa-plus"></i>
+                <a  style="color: blue;" class="fw-bold" href="{%url 'add-product'%}">SELL</a>
             </button>
-        </div>
+          </div>
            
           </div>
         </div>
@@ -89,7 +105,7 @@
     <div class="container-fluid">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">
+          <a class="nav-link active  dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-current="page" href="#">
             ALL CATEGORIES
           </a>
           <ul class="dropdown-menu">
@@ -103,22 +119,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Cars</a>
+            <a class="nav-link active text-dark" style="width: 60px;" aria-current="page" href="#">Cars</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="#">Mobile Phones</a>
+            <a class="nav-link active text-dark" aria-current="page"href="#">Mobile Phones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="#">Scooters</a>
+            <a class="nav-link active text-dark" aria-current="page"href="#">Scooters</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="#">Motorcycle</a>
+            <a class="nav-link active text-dark" aria-current="page"href="#">Motorcycle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="#">For Sale: Houses & Appartment</a>
+            <a class="nav-link active text-dark" aria-current="page"href="#">For Sale: Houses & Appartment</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"href="#">For Rent: Houses & Apartment</a>
+            <a class="nav-link active text-dark" aria-current="page"href="#">For Rent: Houses & Apartment</a>
           </li>
         </ul>
         </ul>

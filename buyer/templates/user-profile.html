@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="#">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+   <form action="post" enctype="multipart/form-data">
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"></span>
+                    <span class="text-black-50"></span><h5 class="user-name">{{request.user}}</h5>
+                    <span> </span><h6 class="user-email">{{request.user.email}}</h6></div> </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" placeholder="Enter Full Name" value=""></div> 
+                        <div class="col-md-6"><label class="labels">Sur Name</label><input type="text" class="form-control" placeholder="Enter Sur Name" value=""></div>   
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="Enter phone number" value=""></div>
+                        <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="Enter address line 1" value=""></div>
+                        <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="Enter Postcode" value=""></div>
+                        <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="Enter State" value=""></div>
+                        <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="Enter Area" value=""></div>
+                        <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                        
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
+                        <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                    </div>
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2" >
+                          <div class="text-right">
+                            <button type="button" id="submit" name="submit" class="btn btn-info"><a href="{%url 'my-product'%}" class="fw-bold">View Added Products</a></button>
+                            <button type="button" id="submit" name="submit" class="btn btn-info"><a href="{%url 'profile-edit'%}" class="fw-bold">Update</a></button>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+   </form>
+   <section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {%for product in products%}
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    {%if product.photo%}
+                    <img class="card-img-top" style="width: 100%; height: 250px;" src="{{product.photo.url}}" alt="..." />
+  
+                    {%else%}
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+  
+                    {%endif%}
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{product.name}}</h5>
+                            <!-- Product price-->
+                            {{product.price}}
+                            <div>{{product.category}}</div>
+                            <div>{{product.location}}</div>
+                            <div>{{product.created_at}}</div>
+  
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center "><a class="btn btn-outline-dark mt-auto text-light"  style="background-color: #054350;"
+                                href="{%url 'product-detail' product.id%}">View More</a></div>
+                    </div>
+                </div>
+            </div>
+  
+  
+            {%endfor%}
+        </div>
+    </div>
+  </section>
+
+    
+</body>
+</html>

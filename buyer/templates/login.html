@@ -15,20 +15,21 @@
 <div class="blur"></div>
 	<div class="formContent blur"> <img src="{%static 'images/avtar.jpg'%}" class="avatarImg">
 	<h2>Login Form</h2>
-	<form>
+	<form action="#" method="post">
+		{%csrf_token%}
 	<label>Email</label>
 	<input type="email" name="email" placeholder="Enter Email" required>
 	<label>Password</label>
 	<input type="password" name="password" placeholder="Enter Password" required>
 	<input type="submit" name="submit" value="Login">
 	<div class="remember">
-<div class="login"><div class="Oroption">OR</div></div>
+<!-- <div class="login"><div class="Oroption">OR</div></div>
 <div>Login with Facebook and Google</div>
 <div class="links">
 	<div class="facebook"><img src="{%static 'images/facebook.png'%}" alt="Facebook Icon" /> </div>
 	<div class="google"> <img src="{%static 'images/google.png'%}" alt="Google Icon" /> </div>
-</div>
-<div class="signup"> Don't have account? <a href="#">Signup Now</a> </div>
+</div> -->
+<div class="signup"> Don't have account? <a href="{%url 'signin'%}">Signup Now</a> </div>
 </div>
 </form>
 </div>
